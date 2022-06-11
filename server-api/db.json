@@ -1,0 +1,11 @@
+{
+    "permissions":[
+        {
+            "id": 100,
+            "employeeFirstName": "Christian",
+            "employeeLastName": "Perez",
+            "permissionType": 1,
+            "permissionDate": "2022-12-12"
+        }
+    ]
+}
