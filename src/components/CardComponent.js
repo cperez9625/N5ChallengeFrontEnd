@@ -8,7 +8,6 @@ const CardComponent = ({permission, handleShow, setDataModal}) =>{
     
     return(
         <div className="mr-1 mb-3">
-            {console.log(permission)}
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://2wcvjr2o0jc97l6eq1lut4y1-wpengine.netdna-ssl.com/wp-content/uploads/2016/09/no-profile-img.jpg" />
                 <Card.Body>

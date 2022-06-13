@@ -56,7 +56,6 @@ const PermissionsMain = () =>{
     }
 
     const handleUpdatePermission = async () =>{
-        console.log(dataModal);
         if(dataModal.EmployeeFirstName === "" ||
         dataModal.EmployeeLastName === "" ||
         dataModal.PermissionType === 0){
@@ -69,7 +68,8 @@ const PermissionsMain = () =>{
         }
 
         const response = await api.put(`/${CONTROLLER_KEY}`, dataModal);
-        if(response.status === 201){
+        console.log(response);
+        if(response.status === 200){
             Swal.fire(
                 'Sucessfully Saved!',
                 `Permissions for ${dataModal.EmployeeFirstName} ${dataModal.EmployeeLastName} have been updated`,

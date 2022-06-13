@@ -52,8 +52,7 @@ const PermissionManagement = () =>{
         }
 
         const response = await api.post(`/${PERMISSION_CONTROLLER_KEY}`, permission);
-        console.log(response);
-        if(response.status === 201){
+        if(response.status === 200){
             Swal.fire(
                 'Sucessfully Saved!',
                 `Permissions for ${permission.EmployeeFirstName} ${permission.EmployeeLastName} have been granted`,
