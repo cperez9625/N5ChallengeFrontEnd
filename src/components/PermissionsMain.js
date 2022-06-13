@@ -56,9 +56,10 @@ const PermissionsMain = () =>{
     }
 
     const handleUpdatePermission = async () =>{
+        console.log(dataModal);
         if(dataModal.EmployeeFirstName === "" ||
         dataModal.EmployeeLastName === "" ||
-        dataModal.PermissionType === 0){
+        parseInt(dataModal.PermissionType) === 0){
             Swal.fire(
                 'Warning',
                 `All Fields Are Mandatory!`,
@@ -68,7 +69,6 @@ const PermissionsMain = () =>{
         }
 
         const response = await api.put(`/${CONTROLLER_KEY}`, dataModal);
-        console.log(response);
         if(response.status === 200){
             Swal.fire(
                 'Sucessfully Saved!',
